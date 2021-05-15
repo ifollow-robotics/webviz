@@ -37,7 +37,7 @@ function textMarkers({
       },
       scale: { x: 1, y: 1, z: 1 },
       color,
-      colors: background ? [color, { r: 1, g: 1, b: 0, a: 1 }] : undefined,
+      colors: background ? [color, { r: 1, g: 1, b: 0, a: 0 }] : undefined,
       billboard,
     },
   ];

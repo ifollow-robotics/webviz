@@ -517,7 +517,7 @@ function makeTextCommand(alphabet?: string[]) {
           backgroundColor[4 * index + 0] = bgColor.r;
           backgroundColor[4 * index + 1] = bgColor.g;
           backgroundColor[4 * index + 2] = bgColor.b;
-          backgroundColor[4 * index + 3] = bgColor.a;
+          backgroundColor[4 * index + 3] = 0.0;
 
           highlightColor[4 * index + 0] = hlColor.r;
           highlightColor[4 * index + 1] = hlColor.g;
