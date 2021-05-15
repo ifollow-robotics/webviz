@@ -13,11 +13,11 @@ import { getCSSColor, toColor } from "../utils/commandUtils";
 import { type WorldviewContextType } from "../WorldviewContext";
 import WorldviewReactContext from "../WorldviewReactContext";
 
-const BG_COLOR_LIGHT = "#ffffff";
-const BG_COLOR_DARK = "rgba(0,0,0,0.8)";
+const BG_COLOR_LIGHT = "rgba(1,1,1,0)";
+const BG_COLOR_DARK = "rgba(0,0,0,0)";
 const BRIGHTNESS_THRESHOLD = 128;
 const DEFAULT_TEXT_COLOR = { r: 1, g: 1, b: 1, a: 1 };
-const DEFAULT_BG_COLOR = { r: 0, g: 0, b: 0, a: 0.8 };
+const DEFAULT_BG_COLOR = { r: 0, g: 0, b: 0, a: 0.0 };
 
 export type TextMarker = {
   name?: string,
@@ -90,7 +90,7 @@ class TextElement {
     this.wrapper.style.transform = `translate(${left.toFixed()}px,${top.toFixed()}px)`;
     const { color, colors = [] } = marker;
     const hasBgColor = colors.length >= 2;
-    const textColor = toColor(hasBgColor ? colors[0] : color || [0, 0, 0, 1]);
+    const textColor = toColor(hasBgColor ? colors[0] : color || [0, 0, 0, 0]);
 
     if (textColor) {
       const backgroundColor = toColor(colors[1]);
