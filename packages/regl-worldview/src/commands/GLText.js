@@ -235,7 +235,8 @@ const vert = `
 
   void main () {
     // Scale invariance only works for billboards
-    bool scaleInvariantEnabled = scaleInvariant && billboard == 1.0;
+    // bool scaleInvariantEnabled = scaleInvariant && billboard == 1.0;
+    bool scaleInvariantEnabled = false;
 
     vec2 srcSize = vec2(srcWidth, fontSize);
     vec3 markerSpacePos = vec3((destOffset + position * srcSize + alignmentOffset) / fontSize, 0);
