@@ -83,8 +83,8 @@ const SDF_RADIUS = 8;
 const CUTOFF = 0.25;
 const BUFFER = 10;
 
-const BG_COLOR_LIGHT = Object.freeze({ r: 1, g: 1, b: 1, a: 1 });
-const BG_COLOR_DARK = Object.freeze({ r: 0, g: 0, b: 0, a: 1 });
+const BG_COLOR_LIGHT = Object.freeze({ r: 1, g: 1, b: 1, a: 0 });
+const BG_COLOR_DARK = Object.freeze({ r: 0, g: 0, b: 0, a: 0 });
 
 const memoizedCreateCanvas = memoizeOne((font) => {
   // $FlowFixMe: Flow doesn't know about OffscreenCanvas.
